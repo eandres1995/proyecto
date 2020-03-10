@@ -35,8 +35,41 @@ if(!isset($rol)){
                     <a class="blog-header-logo text-dark" href="#">Pàgina Principal</a>
                 </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
-                    <p><b>No has iniciat sessió!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></p>
-                    <a class="btn btn-sm btn-outline-secondary" href="login.php">Inicia sessió</a>
+                    <div>
+
+                        <?php
+                        if(isset($_COOKIE["cookieusuario"])&& isset($_COOKIE["cookierol"])){
+                            echo "<h4>";
+                            echo "Usuari: " . $_COOKIE["cookieusuario"] . " ";
+                            echo "Rol: " . $_COOKIE["cookierol"] . "</h4>";
+                        }
+
+
+                        else
+                        {
+                            echo "<h4>";
+                            echo "Usuari no identificat.";
+                            echo "</h4>";
+                        }
+                        ?>
+                    </div>
+                    <div>
+                        <?php
+                        if(isset($_COOKIE["cookieusuario"])&& isset($_COOKIE["cookierol"])){
+                            echo "<form action=\"logout.php\" method=\"post\">";
+                            echo            "<input type=\"submit\" value=\"logout\">";
+                            echo            "</form>";
+
+                        }
+                        else{
+                            echo "<form action=\"login.php\" method=\"post\">";
+                            echo            "Nombre a consultar: <input type=\"txt\" name=\"nombre\"><br>";
+                            echo            "Password: <input type=\"password\" name=\"password\"><br>";
+                            echo            "<input type=\"submit\" value=\"inicia\">";
+                            echo            "</form>";
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </header>
