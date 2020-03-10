@@ -11,7 +11,7 @@ class CrudGames{
         $insert=$db->prepare('INSERT INTO juegos (nombre,plataforma,desarrollador) values(:nombre,:plataforma,:desarrollador)');
         $insert->bindValue('nombre',$game->getNombre());
         $insert->bindValue('plataforma',$game->getPlataforma());
-        $insert->bindValue('contra',$game->getDesarrollador());
+        $insert->bindValue('desarrollador',$game->getDesarrollador());
      
 
         $insert->execute();
