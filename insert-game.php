@@ -16,7 +16,7 @@
         <input style="max-width: 40%" id="desarrollador" name="desarrollador" type="text" class="form-control" placeholder="Desarrollador" maxlength="20" required>
         <input type='hidden' name='insertar' value='insertar'>
     </div>
-    <input type="submit" id="guardar" name="submit" onclick="return validar()" value='Guardar'>
+    <input type="submit" id="guardar" name="submit" value='Guardar'>
     <a href="index-games-admin.php">Tornar</a>
 </form>
 </body>
