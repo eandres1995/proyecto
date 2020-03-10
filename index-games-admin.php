@@ -1,10 +1,10 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 header('Content-Type: text/html; charset=utf-8');
-require_once('crud_users.php');
-require_once('user.php');
+require_once('crud_games.php');
+require_once('game.php');
 
-$crud=new CrudUsuari();
+$crud=new CrudGames();
 $game = new game();
 $listaGames=$crud->mostrar();
 
@@ -12,7 +12,7 @@ $listaGames=$crud->mostrar();
 
 <html lang="es">
 <head>
-    <title>Administrar usuaris</title>
+    <title>Administrar juegos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,7 +22,7 @@ $listaGames=$crud->mostrar();
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script>
-        $(document).on("click", "#delete-usuari", function (e) {
+        $(document).on("click", "#delete-game", function (e) {
             let boton = $(this);
             e.preventDefault();
             e.stopImmediatePropagation();
@@ -71,7 +71,7 @@ $listaGames=$crud->mostrar();
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="update-user.php?id=<?php echo $usuari->getId()?>" class="btn btn-sm btn-outline-secondary">Actualizar</a>
-                                        <a href="user-admin.php?id=<?php echo $usuari->getId()?>&accion=e" id="delete-usuari" class="btn btn-sm btn-outline-secondary">Eliminar</a>
+                                        <a href="user-admin.php?id=<?php echo $usuari->getId()?>&accion=e" id="delete-game" class="btn btn-sm btn-outline-secondary">Eliminar</a>
                                     </div>
                                 </div>
                             </div>

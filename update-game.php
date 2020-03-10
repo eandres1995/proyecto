@@ -1,7 +1,7 @@
 <?php
 #Arreglar actualizar para poder dejar la imagen vacia, para poder actualizar sin tener que poner la imagen.
-require_once('crud_users.php');
-require_once('user.php');
+require_once('crud_games.php');
+require_once('game.php');
 $crud=new CrudGames();
 $game= new game();
 $game=$crud->obtenergame($_GET['id']);
