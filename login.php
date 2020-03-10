@@ -1,112 +1,34 @@
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-header {
-        border: solid 1px red; height: 100px;
- }
-nav {
-        border: solid 1px blue;
- }
- nav div        {
-        width: 75%;
-        float: left;
-        margin: 0 auto;
-//      border: solid 1px black;
-        height: 5em
-        outline:none
- }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
 
- nav div:last-child     {
-        width: 25%;
-        float: right;
-        margin: 0 auto;
-//      border: solid 1px yellow;
-        height: 5em
-        outline:none
-        text-align:right
+    <title>Pàgina de Login</title>
 
- }
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
 
- footer {
-        border: solid 1px green;
- }
- main {
-        border: solid 1px yellow;
-        clear: both
- }
-</style>
-<meta charset="UTF-8">
-<title>Mi Proyecto</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css" rel="stylesheet">
 </head>
-<body>
-<header> hello world</header>
 
-<nav>
-<div>
-        <a href="enlace1">Enlace uno</a>
-        <a href="enlace2">Enlace dos</a>
-        <a href="enlace3">Enlace tres</a>
+<body class="text-center">
+    <form class="form-signin" action="loginValidate.php" method="POST">
+        <img class="mb-4" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="" width="160" height="160">
+        <h1 class="h3 mb-3 font-weight-normal">Inicia sessió</h1>
+        <label for="check_user" class="sr-only">Email address</label>
+        <input type="text" id="check_user" name="check_user" class="form-control" placeholder="Usuari" required autofocus>
+        <label for="check_password" class="sr-only">Password</label>
+        <input type="password" name="check_password" id="check_password" class="form-control" placeholder="Contrasenya" required>
 
-
-<form action="login.php" method="post">
-Nombre a consultar: <input type="txt" name="nombre"><br>
-Password: <input type="password" name="password"><br>
-<input type="submit" value="inicia">
-</form>
-</div>
-<div>
-Verificando
-</div>
-</nav>
-
-<main>
-
-<?php
-$servername="localhost";
-$BBDD="login-user";
-$username="abarranco";
-$password="abarranco";
-
-//obrïm connexió
-
-$con=new mysqli($servername, $username, $password, $BBDD);
-
-if($con->connect_error){
-        die("Fallada de connexió");
-}
-$sql="SELECT nom, contra,rol FROM usuaris";
-
-$result=$con->query($sql);
-
-echo "Numero d'usuaris: " . $result->num_rows. "<br>";
-
-while($row = $result->fetch_assoc())
-{
-if($_POST["nombre"]==$row["nom"]&&$_POST["password"]==$row["contra"]){
-$cookie_value=$_POST["nombre"];
-setcookie("cookieusuario", $cookie_value, time() + (86400 * 30), "/");
-setcookie("cookierol", $row["rol"], time() + (86400 * 30), "/");
-header("Refresh:0;url=\"index.php\"");
-}
-
-        echo "nom: " . $row["nom"] . ", ";
-        echo "contra: " . $row["contra"] . "<br>";
-}
-
-$con->close();
-
-?>
-
-
-
-
-</main>
-
-<footer>
-
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Inicia sessió</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+    </form>
 </body>
-</html>
-
-
-</body> 
 </html>
