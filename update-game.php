@@ -13,7 +13,7 @@ $game=$crud->obtenergame($_GET['id']);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<form style="padding-left : 100px" id="register-form" enctype=multipart/form-data action='user-admin.php' method='post'>
+<form style="padding-left : 100px" id="register-form" enctype=multipart/form-data action='game-admin.php' method='post'>
     <div class="form">
         <h1>Actualiza los datos del juego</h1>
         <input type='hidden' name='id' value='<?php echo $game->getId()?>'>

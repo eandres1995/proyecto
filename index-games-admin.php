@@ -50,7 +50,7 @@ $listaGames=$crud->mostrar();
         <div class="container">
             <h1 class="jumbotron-heading">Administrar Juegos</h1>
             <p>
-                <a href="insert-user.php" class="btn btn-primary my-2">Insertar Juego</a>
+                <a href="insert-game.php" class="btn btn-primary my-2">Insertar Juego</a>
                 <a href="index.php" class="btn btn-secondary my-2">Tornar</a>
             </p>
         </div>
@@ -59,7 +59,7 @@ $listaGames=$crud->mostrar();
     <div class="album py-5 bg-light">
         <div class="container">
             <div class="row">
-                <?php foreach ($listaUsuaris as $usuari) {?>
+                <?php foreach ($listaGames as $game) {?>
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body">
@@ -70,8 +70,8 @@ $listaGames=$crud->mostrar();
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="update-user.php?id=<?php echo $usuari->getId()?>" class="btn btn-sm btn-outline-secondary">Actualizar</a>
-                                        <a href="user-admin.php?id=<?php echo $usuari->getId()?>&accion=e" id="delete-game" class="btn btn-sm btn-outline-secondary">Eliminar</a>
+                                        <a href="update-game.php?id=<?php echo $game->getId()?>" class="btn btn-sm btn-outline-secondary">Actualizar</a>
+                                        <a href="game-admin.php?id=<?php echo $game->getId()?>&accion=e" id="delete-game" class="btn btn-sm btn-outline-secondary">Eliminar</a>
                                     </div>
                                 </div>
                             </div>

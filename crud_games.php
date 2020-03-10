@@ -70,7 +70,7 @@ class CrudGames{
             $actualizar->execute();
             return true;
         } catch (\Exception $e) {
-            header('Location: update-user.php');
+            header('Location: update-game.php');
         }
         return false;
     }
