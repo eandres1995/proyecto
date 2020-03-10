@@ -9,7 +9,15 @@ $usuari = new user();
 
 
 if (isset($_POST["submit"])) {
-    if (isset($_POST['actualizar'])) {
+    if (isset($_POST['insertar'])) {
+        $usuari->setNom($_POST['nom']);
+        $usuari->setCognom($_POST['cognom']);
+        $usuari->setLogin($_POST['login']);
+        $usuari->setContra($_POST['contra']);
+        $usuari->setRol($_POST['rol']);
+        $crud->insertar($usuari);
+        header('Location: index-user-admin.php');
+    } elseif (isset($_POST['actualizar'])) {
 
         require_once 'conexion.php';
 
