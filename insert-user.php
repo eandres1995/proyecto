@@ -27,39 +27,6 @@
     </div>
     <input type="submit" id="guardar" name="submit" onclick="return validar()" value='Guardar'>
     <a href="index-user-admin.php">Tornar</a>
-    <script>
-        function validar() {
-            let nom, cognom, login, contra, rol, expresionLet;
-            nom = document.getElementById("nom").value;
-            cognom = document.getElementById("cognom").value;
-            login = document.getElementById("login").value;
-            contra = document.getElementById("contra").value;
-            rol = document.getElementById("rol").value;
-            expresionLet = new RegExp("^[a-zA-ZñçáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ ]*$");
-            if (nom=== "" || cognom === "" || login === "" || contra === "" || rol === "") {
-                alert("ERROR: Todos los campos son obligatorios");
-                return false;
-            } else if (nom.length > 20) {
-                alert("ERROR: El nombre es muy largo");
-                return false;
-            } else if (!expresionLet.test(nombre)) {
-                alert("ERROR: El nombre solo puede contener letras");
-                return false;
-            } else if (cognom.length > 20) {
-                alert("ERROR: El apellido es muy largo");
-                return false;
-            } else if (!expresionLet.test(cognom)) {
-                alert("ERROR: El apellido solo puede contener letras");
-                return false;
-            } else if (login.length > 20) {
-                alert("ERROR: El login es muy largo");
-                return false;
-            }else if (!expresionLet.test(cognom)){
-                alert("ERROR: El login solo puede contener letras");
-                return false;
-            }
-        }
-    </script>
 </form>
 </body>
 </html>
