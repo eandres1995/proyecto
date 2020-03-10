@@ -207,7 +207,7 @@
 
  </body>
  </html>
-<?php }elseif($_COOKIE["cookierol"]=="user"){ ?>
+<?php }elseif($_COOKIE["cookierol"]=="usuario"){ ?>
  <html><head>
      <style>
          header {
@@ -354,15 +354,6 @@
  <header> hello world</header>
 
  <nav>
-     <div>
-         <a href="index-user-admin.php">Enlace uno</a>
-         <a href="#">Enlace dos</a>
-         <a href="#">Enlace tres</a>
-
-
-     </div>
-
-
      <div>
 
          <?php
