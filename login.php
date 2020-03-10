@@ -1,4 +1,4 @@
-<html> <body>
+<html lang="es">
 <head>
 <style>
 header {
