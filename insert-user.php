@@ -25,7 +25,7 @@
         </select>
         <input type='hidden' name='insertar' value='insertar'>
     </div>
-    <input type="submit" id="guardar" name="submit" onclick="return validar()" value='Guardar'>
+    <input type="submit" id="guardar" name="submit" value='Guardar'>
     <a href="index-user-admin.php">Tornar</a>
 </form>
 </body>

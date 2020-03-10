@@ -37,41 +37,7 @@ $usuari=$crud->obtenerusuari($_GET['id']);
         <input type='submit' name="submit" onclick="return validar()" value='Actualizar'>
         <a href="index-user-admin.php">Tornar</a>
     </div>
-    <script>
-        function validar() {
-            let nom, cognom, login, contra, rol, expresionLet;
-            nom = document.getElementById("nom").value;
-            cognom = document.getElementById("cognom").value;
-            login = document.getElementById("login").value;
-            contra = document.getElementById("contra").value;
-            rol = document.getElementById("rol").value;
 
-            expresionLet = new RegExp("^[a-zA-ZñçáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ ]*$");
-
-            if (nom=== "" || cognom === "" || login === "" || contra === "" || rol === "") {
-                alert("ERROR: Tots els camps són obligatoris");
-                return false;
-            } else if (nom.length > 20) {
-                alert("ERROR: El nom es massa llarg");
-                return false;
-            } else if (!expresionLet.test(nombre)) {
-                alert("ERROR: El nom només pot contenir lletres");
-                return false;
-            } else if (cognom.length > 20) {
-                alert("ERROR: El cognom és molt llarg");
-                return false;
-            } else if (!expresionLet.test(cognom)) {
-                alert("ERROR: El cognom només pot contenir lletres");
-                return false;
-            } else if (login.length > 20) {
-                alert("ERROR: L'usuari és massa llarg");
-                return false;
-            }else if (!expresionLet.test(cognom)){
-                alert("ERROR: L'usuari només pot contenir lletres");
-                return false;
-            }
-        }
-    </script>
 </form>
 </body>
 </html>
