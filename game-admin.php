@@ -20,7 +20,7 @@ if (isset($_POST["submit"])) {
         require_once 'conexion.php';
 
         $db = Db::conectar();
-        $select = $db->query('SELECT * FROM usuaris');
+        $select = $db->query('SELECT * FROM juegos');
         $game->setId($_POST['id']);
         $game->setNombre($_POST['nombre']);
         $game->setPlataforma($_POST['plataforma']);
@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
         require_once 'conexion.php';
 
         $db = Db::conectar();
-        $select = $db->query('SELECT * FROM usuaris');
+        $select = $db->query('SELECT * FROM juegos');
         foreach ($select->fetchAll() as $row_s) {
             $id = $row_s['id'];
         }
