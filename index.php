@@ -43,8 +43,8 @@
 
     <nav>
     <div>
-        <a href="index-user-admin.php">Enlace uno</a>
-        <a href="#">Enlace dos</a>
+        <a href="index-user-admin.php">Administrar Usuarios</a>
+        <a href="index-games-admin.php">Administrar Juegos</a>
         <a href="#">Enlace tres</a>
 
 
@@ -148,7 +148,7 @@
 
  <nav>
      <div>
-         <a href="#">Enlace uno</a>
+         <a href="index-games-admin.php">Administrar Juegos</a>
          <a href="#">Enlace dos</a>
 
 
