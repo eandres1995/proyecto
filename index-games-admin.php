@@ -13,26 +13,6 @@ $listaGames=$crud->mostrar();
 <html lang="es">
 <head>
     <title>Administrar juegos</title>
-    <script>
-        $(document).on("click", "#delete-game", function (e) {
-            let boton = $(this);
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            $.confirm({
-                title: 'Segur?',
-                buttons: {
-                    confirm: function () {
-                        console.log(boton);
-                        window.location.href = boton.attr('href');
-                    },
-                    cancel: function () {
-                        e.preventDefault();
-                        e.stopImmediatePropagation();
-                    },
-                }
-            });
-        });
-    </script>
 </head>
 <body>
 

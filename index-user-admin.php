@@ -13,26 +13,6 @@ $listaUsuaris=$crud->mostrar();
 <html lang="es">
 <head>
     <title>Administrar usuaris</title>
-    <script>
-        $(document).on("click", "#delete-usuari", function (e) {
-            let boton = $(this);
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            $.confirm({
-                title: 'Segur?',
-                buttons: {
-                    confirm: function () {
-                        console.log(boton);
-                        window.location.href = boton.attr('href');
-                    },
-                    cancel: function () {
-                        e.preventDefault();
-                        e.stopImmediatePropagation();
-                    },
-                }
-            });
-        });
-    </script>
 </head>
 <body>
 
